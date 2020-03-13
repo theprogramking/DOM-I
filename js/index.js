@@ -57,13 +57,14 @@ links[1].innerHTML = siteContent["nav"]["nav-item-2"];
 links[2].innerHTML = siteContent["nav"]["nav-item-3"];
 links[3].innerHTML = siteContent["nav"]["nav-item-4"];
 links[4].innerHTML = siteContent["nav"]["nav-item-5"];
+links[5].innerHTML = siteContent["nav"]["nav-item-6"];
 
 let newlink = document.createElement("a");
 newlink.innerHTML = "Login";
 nav.prepend(newlink);
 
 let secondnewlink = document.createElement("a");
-secondnewlink.innerHTML = "Contact";
+secondnewlink.innerHTML = "Sign Up";
 nav.appendChild(secondnewlink);
 
 // First Section
