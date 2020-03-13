@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM <br/> Is <br/> Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -59,11 +59,11 @@ links[3].innerHTML = siteContent["nav"]["nav-item-4"];
 links[4].innerHTML = siteContent["nav"]["nav-item-5"];
 
 let newlink = document.createElement("a");
-newlink.innerHTML = "Yeet";
+newlink.innerHTML = "Login";
 nav.prepend(newlink);
 
 let secondnewlink = document.createElement("a");
-secondnewlink.innerHTML = "Skeet";
+secondnewlink.innerHTML = "Contact";
 nav.appendChild(secondnewlink);
 
 // First Section
@@ -74,25 +74,17 @@ header.innerHTML = siteContent["cta"]["h1"];
 button.innerHTML = siteContent["cta"]["button"];
 
 // Features
-let content = document.querySelector(".text-content");
-let h4 = content.querySelector("h4");
-let para = content.querySelector("p");
-h4.innerHTML = siteContent["main-content"]["features-h4"];
-para.innerHTML = siteContent["main-content"]["features-content"]; 
-
-// About
-let about = document.querySelector(".text-content:nth-child(2)");
-let aboutHeader = about.querySelector("h4");
-let aboutPara = about.querySelector("p");
-aboutHeader.innerHTML = siteContent["main-content"]["about-h4"];
-aboutPara.innerHTML = siteContent["main-content"]["about-content"]; 
-
-// Services
-let services = document.querySelector(".text-content:nth-child(3)");
-let servicesHeader = services.querySelector("h4");
-let servicesPara = services.querySelector("p");
-servicesHeader.innerHTML = siteContent["main-content"]["services-h4"];
-servicesPara.innerHTML = siteContent["main-content"]["services-content"]; 
+let content = document.querySelectorAll(".text-content");
+content[0].querySelector("h4").innerHTML = siteContent["main-content"]["features-h4"];
+content[1].querySelector("h4").innerHTML = siteContent["main-content"]["about-h4"];
+content[2].querySelector("h4").innerHTML = siteContent["main-content"]["services-h4"];
+content[3].querySelector("h4").innerHTML = siteContent["main-content"]["product-h4"];
+content[4].querySelector("h4").innerHTML = siteContent["main-content"]["vision-h4"];
+content[0].querySelector("p").innerHTML = siteContent["main-content"]["features-content"];
+content[1].querySelector("p").innerHTML = siteContent["main-content"]["about-content"];
+content[2].querySelector("p").innerHTML = siteContent["main-content"]["services-content"];
+content[3].querySelector("p").innerHTML = siteContent["main-content"]["product-content"];
+content[4].querySelector("p").innerHTML = siteContent["main-content"]["vision-content"];
 
 // Contact
 let contact = document.querySelector(".contact");
@@ -105,5 +97,6 @@ contactInfo[2].innerHTML = siteContent["contact"]["phone"];
 
 // Footer
 let footer = document.querySelector("footer");
+console.log(footer);
 let copyright = footer.querySelector("p");
 copyright.innerHTML = siteContent["footer"]["copyright"];
